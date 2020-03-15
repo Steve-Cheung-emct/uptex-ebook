@@ -1,0 +1,74 @@
+{
+    "latex-workshop.latex.recipes": [
+      {
+        "name": "ptex2pdf-A4",
+        "tools": [
+          "uplatex",
+          "ptex2pdf-A4",
+        ]
+      },
+      {
+        "name": "ptex2pdf-B5",
+        "tools": [
+          "uplatex",
+          "ptex2pdf-B5",
+        ]
+      }
+    ],
+      "latex-workshop.latex.tools": [
+      {
+        "name": "ptex2pdf-A4",
+        "command": "ptex2pdf",
+        "args": [
+         "-u",
+         "-l",
+         "-ot",
+         "-kanji=utf8 -synctex=1 -interaction=nonstopmode -file-line-error",
+         "-od",
+         "-p A4",
+         "%DOC%"
+        ]
+      },
+      {
+        "name": "ptex2pdf-B5",
+        "command": "ptex2pdf",
+        "args": [
+         "-u",
+         "-l",
+         "-ot",
+         "-kanji=utf8 -synctex=1 -interaction=nonstopmode -file-line-error",
+         "-od",
+         "-p B5",
+         "%DOC%"
+        ]
+      },
+      {
+        "name": "uplatex",
+        "command": "uplatex",
+        "args": [
+         "-kanji=utf8 -synctex=1 -interaction=nonstopmode -file-line-error",
+         "%DOC%"
+        ]
+      }
+    ],  
+"latex-workshop.view.pdf.viewer": "external",
+    "latex-workshop.view.pdf.external.viewer.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe", // 注意修改路径
+    "latex-workshop.view.pdf.external.viewer.args": [
+        "%PDF%"
+    ],
+    "latex-workshop.view.pdf.external.synctex.command": "C:/Program Files/SumatraPDF/SumatraPDF.exe", // 注意修改路径
+    "latex-workshop.view.pdf.external.synctex.args": [
+        "-forward-search",
+        "%TEX%",
+        "%LINE%",
+        "-reuse-instance",
+        "-inverse-search",
+        "code \"C:\\Program Files\\Microsoft VS Code\\resources\\app\\out\\cli.js\" -r -g \"%f:%l\"", // 注意修改路径
+        "%PDF%",
+    ],
+    "latex-workshop.latex.autoBuild.run": "never",
+    "extensions.ignoreRecommendations": true,
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Github Light Theme - Gray",
+  }
